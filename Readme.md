@@ -3,10 +3,15 @@
 Ce projet utilise C++20 et compile avec GCC version 10.2.0. Il n'a aucune dépendances externe (il ne nécessite que la librairie standard C++).
 
 ## Build
-Pour build le projet :
+Pour build et run le projet :
 ```
-cd ./src
-g++ -std=c++20 main.cpp
+g++ -std=c++20 -o ./cpp/myapp ./cpp/main.cpp
+./cpp/myapp
+```
+Il est aussi possible de le faire avec docker:
+```
+docker build -t my-gcc-app ./cpp
+docker run -it --rm --name my-running-app my-gcc-app
 ```
 
 ## Remarques
